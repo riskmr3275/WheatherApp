@@ -78,6 +78,16 @@ body {
 
 .details
 {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.time
+{ 
+    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,3 +112,4 @@ body {
     font-size: 28px;
     margin-top: -6px;
 }
+ 

@@ -4,6 +4,24 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".wheatherIcon");
+const sunrise = document.querySelector(".sunrise");
+const sunset = document.querySelector(".sunset");
+function formatTimestamp(timestamp) {
+    const date = new Date(timestamp * 1000); // Convert to milliseconds
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true // Display in 12-hour format
+    };
+    let formattedDate = date.toLocaleString("en-US", options);
+     
+    return formattedDate.split(" ")[5];
+}
 async function checkWeather(city="Mumbai") {
     try {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -17,7 +35,9 @@ async function checkWeather(city="Mumbai") {
         document.querySelector(".temp").innerHTML = Math.floor(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
+        document.querySelector(".time").style.visibility = "visible";
+        sunrise.innerHTML = formatTimestamp(data.sys.sunrise)+"AM";
+        sunset.innerHTML = formatTimestamp(data.sys.sunset)+"PM";
         // Determine the weather condition and set the image source
         const weatherCondition = data.weather[0].main.toLowerCase();
         switch (weatherCondition) {
