@@ -9,6 +9,7 @@ Real-Time Data: Fetches current weather information for any location.<br>
 7-Day Forecast: View the weather for the week ahead.<br>
 Interactive UI: A user-friendly interface with animated weather icons.<br>
 Responsive Design: Optimized for both mobile and desktop devices.<br>
+
 Tech Stack 🛠️<br>
 Frontend: HTML, CSS,JavaScript<br>
 API: OpenWeatherMap API for weather data <br>
