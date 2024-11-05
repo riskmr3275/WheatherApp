@@ -4,12 +4,12 @@ A simple and intuitive weather application built to provide real-time weather up
 🔗 Live Demo
 Explore the live app here: Weather App on Vercel
 
-Features ✨
+Features ✨<br>
 Real-Time Data: Fetches current weather information for any location.
 7-Day Forecast: View the weather for the week ahead.
 Interactive UI: A user-friendly interface with animated weather icons.
 Responsive Design: Optimized for both mobile and desktop devices.
-Tech Stack 🛠️
+Tech Stack 🛠️<br>
 Frontend: HTML, CSS,JavaScript
 API: OpenWeatherMap API for weather data
 Deployment: Vercel for continuous deployment and hosting
