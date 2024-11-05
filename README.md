@@ -1,4 +1,4 @@
-<h1>Weather App </h1>🌤️<br>
+<h1>Weather App🌤️ </h1><br>
 A simple and intuitive weather application built to provide real-time weather updates and forecasts for any location worldwide. This app is designed with a clean, responsive interface and offers users essential weather details like temperature, humidity, wind speed, and more.
 
 🔗 Live Demo<br>
