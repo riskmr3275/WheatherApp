@@ -113,3 +113,9 @@ body {
     margin-top: -6px;
 }
  
+.type
+{ 
+    visibility: hidden;
+     color: hsl(219, 39%, 36%);
+  
+}

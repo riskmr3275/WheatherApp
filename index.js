@@ -36,6 +36,8 @@ async function checkWeather(city="Mumbai") {
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
         document.querySelector(".time").style.visibility = "visible";
+        document.querySelector(".type").style.visibility = "visible";
+        document.querySelector(".type").innerHTML = data.weather[0].description;
         sunrise.innerHTML = formatTimestamp(data.sys.sunrise)+"AM";
         sunset.innerHTML = formatTimestamp(data.sys.sunset)+"PM";
         // Determine the weather condition and set the image source
@@ -55,6 +57,9 @@ async function checkWeather(city="Mumbai") {
                 break;
             case "thunderstorm":
                 weatherIcon.src = "images/thunderstorm.png";
+                break;
+            case "haze":
+                weatherIcon.src = "images/haze.png";
                 break;
             case "drizzle":
                 weatherIcon.src = "images/drizzle.png";
